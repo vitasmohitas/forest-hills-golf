@@ -24,10 +24,10 @@ export default function Home() {
         <ScrollReveal>
           <AboutClub /> {/* Внутри этого файла должен быть id="about" */}
         </ScrollReveal>
+        <ScrollReveal>
+          <Statistics />
+        </ScrollReveal>
       </div>
-      <ScrollReveal>
-        <Statistics />
-      </ScrollReveal>
       <GolfMap />
       <Services />
       <MembershipBenefits />
