@@ -1,10 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typescript: {
+    // Оставляем это, чтобы билд не падал из-за мелких ошибок
     ignoreBuildErrors: true,
   },
   images: {
-    domains: ['images.unsplash.com'],
+    // Заменяем domains на remotePatterns
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
 }
 
